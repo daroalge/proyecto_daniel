@@ -19,6 +19,7 @@ body {
     align-items: center;
     padding: 10px 40px;
     background-color: #4ca6de;
+    width: 100vw;
 }
 
 .header__logo--img1 {
@@ -67,11 +68,58 @@ body {
 /*styles for section banner*/
 .section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
 }
 
+.section__banner {
+    display: flex;
+    padding: 50px;
+}
+
+.section__banner--imagesAndButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.section__banner--back, .section__banner--forward {
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: #4ca6de;
+}
+
+.section__banner--back:hover, .section__banner--forward:hover {
+    transition: 0.5s;
+    color: #35749B;
+    font-size: 2.5rem;
+}
+
+.section__banner--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
 .section__banner--iceCreamPhoto{
-    width: 50vw;
+    width: 70vw;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.section__banner--text h2 {
+    font-size: 1.7rem;
+    color: #fff;
+    padding: 10px 20px;
+    font-style: italic;
+    font-weight: 900;
+    transform: translateY(-52vh);
+    background-color:#4ca6de;
+    border-radius: 5px;
 }
 
 /*-----MOBILE-----*/
