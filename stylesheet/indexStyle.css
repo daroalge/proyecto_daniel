@@ -330,6 +330,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
     .open__menu {
         display: block;
         font-size: 2rem;
@@ -360,17 +361,19 @@ footer {
         transition: ease-in-out 0.5s ease;
     }
 
-    .nav.visible{
+    .nav.visible {
         visibility: visible;
     }
 
-    .nav-list{
+    .nav__list {
+        width: 100vw;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
         gap: 3rem;
     }
 
-    .nav-list li a{
+    .nav__list li a{
         color: #ffff
     }
 
@@ -388,6 +391,117 @@ footer {
 
 .section {
     display: none;
+}
+
+/*styles for main products*/
+
+.main__products--top {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__products--title {
+    font-size: 2.2rem;
+}
+
+.main__products--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__products--item1, .main__products--item2, .main__products--item3 {
+    width: 90vw;
+    padding: 10px 0px;
+    background-color: #f5efdc;
+    border-radius: 0%;
+    box-shadow: none;
+}
+
+.main__products--photo1, .main__products--photo2, .main__products--photo3 {
+    height: 60vh;
+    object-fit:cover; 
+}
+
+.main__products--text1, .main__products--text2, .main__products--text3 {
+    color: #9d755c;
+    font-size: 1.8rem;
+    border-top-style: solid;
+    border-top-color: #6E5240;
+}
+
+/*styles for main ingredients*/
+.main__ingredients {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__ingredients--title {
+    font-size: 2.2rem;
+    padding: 0;
+}
+
+.main__ingredients--header {
+    display: none;
+}
+
+.main__ingredients--item {
+    background-color: unset;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.main__ingredients--item1 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: max-content;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px;
+}
+
+.main__ingredients--photo1 {
+    width: 80vw;
+    object-fit: cover;
+    margin: 0;
+}
+
+.main__ingredients--text1 {
+    font-size: 2rem;
+    color: #35749B;
+    margin: 0;
+}
+
+.main__ingredients--description1 {
+    color: #4495C8;
+    align-items: center;
+    width: 90vw;
+    font-size: 1rem;
+}
+
+/*styles for footer*/
+footer {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__social, .bi {
+    font-size: 2.2rem;
+    padding: 10px 0;
+}
+
+.footer__info p, .footer__info a {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.footer__header img {
+    height: 50vw;
 }
 
 }
