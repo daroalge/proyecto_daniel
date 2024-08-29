@@ -10,6 +10,10 @@ body {
     padding: 0;
 }
 
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
 /*-----Navigation bar-----*/
 
 /*styles for header and navigation bar*/
@@ -76,7 +80,7 @@ body {
 
 .section__banner {
     display: flex;
-    padding: 50px;
+    padding: 50px 50px 50px 50px;
 }
 
 .section__banner--imagesAndButtons {
@@ -120,6 +124,195 @@ body {
     transform: translateY(-52vh);
     background-color:#4ca6de;
     border-radius: 5px;
+    cursor: default;
+}
+
+/*-----styles for main products-----*/
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.main__products--top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.main__products {
+    display: block;
+    flex-direction: row;
+    background-color: #f5efdc;
+    padding-bottom: 100px
+}
+
+.main__products--title {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    color: #9d755c;
+    cursor: default;
+    padding: 0px 20px;
+}
+
+.main__products--item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main__products--item1, .main__products--item2, .main__products--item3 {
+display: flex;
+flex-direction: column;
+width: 30%;
+padding: 0px 10px;
+background-color: #6E5240;
+border-radius: 30px;
+box-shadow: 10px 10px 15px #1F1712;
+}
+
+.main__products--photo1, .main__products--photo2, .main__products--photo3 {
+    height: 50vh;
+    object-fit: contain;
+    padding: 0%;
+}
+
+.main__products--text1, .main__products--text2, .main__products--text3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #BA9E8D;
+    padding-top: 30px;
+    border-top-style: solid;
+    border-top-color: #fff;
+    cursor: default;
+}
+
+/*-----styles for main ingredients-----*/
+.main__ingredients {
+    display: block;
+    flex-direction: row;
+}
+
+.main__ingredients--top {
+    display: block;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main__ingredients--title {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4ca6de;
+    cursor: default;
+    padding-top: 20px;
+}
+
+.main__ingredients--header {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.main__ingredients--item {
+    background-color: #1F1712;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main__ingredients--item1 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: max-content;
+    padding: 0px 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main__ingredients--photo1 {
+    width: 100%;
+    object-fit: contain;
+    padding: 0;
+}
+
+.main__ingredients--text1 {
+    font-size: 1.7rem;
+    color: #6E5240;
+    font-style: normal;
+    font-weight: 750;
+    align-items: center;
+
+}
+
+.main__ingredients--description1 {
+    color: #9d755c;
+    font-weight: 500;
+    margin: 0px;
+    align-items: center;
+}
+
+/*-----styles for footer-----*/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    background-color: #4ca6de;
+    color: #fff;
+}
+
+.footer__social, .bi {
+    background-color: 12;
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.bi:hover {
+    color: #9d755c;
+    font-size: 2.1rem;
+    transition: 0.7;
+}
+
+.footer__info p, .footer__info a {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__info a:hover {
+    color: #9d755c;
+    transition: 0.7;
+}
+
+.footer__contact a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__header img {
+    height: 10vw;
 }
 
 /*-----MOBILE-----*/
@@ -198,5 +391,3 @@ body {
 }
 
 }
-
-
