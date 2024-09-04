@@ -1,0 +1,147 @@
+.mainAuth {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+}
+
+/*-----styles for main register-----*/
+.mainAuth__register {
+    margin: 0;
+    max-width: 450px;
+    min-width: 400px;
+    background-color: #f5efdc;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.mainAuth__register--fieldset {
+    margin: 20px 0;
+    border: 2px solid #6E5240;
+    border-radius: 6px;
+    padding: 10px;
+    align-items: center;
+}
+
+.mainAuth__register--field {
+    margin-bottom: 15px;
+}
+
+.mainAuth__register--label {
+    display: block;
+    margin: 30px 5px 10px;
+    font-size: 1.1rem;
+    color: #9d755c;
+    font-weight: 700;
+}
+
+.mainAuth__register--input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #B1917D;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.mainAuth__register--input:focus {
+    border-color: #4F3B2E;
+    outline: none;
+}
+
+.mainAuth__register--button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #9d755c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*-----styles for main login-----*/
+.mainAuth__login {
+    margin: 0;
+    max-width: 450px;
+    min-width: 400px;
+    background-color: #f5efdc;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    height: 50%;
+}
+
+.mainAuth__login--fieldset {
+    margin: 20px 0;
+    border: 2px solid #6E5240;
+    border-radius: 6px;
+    padding: 10px;
+    align-items: center;
+}
+
+.mainAuth__login--field {
+    margin-bottom: 15px;
+}
+
+.mainAuth__login--label {
+    display: block;
+    margin: 30px 5px 10px;
+    font-size: 1.1rem;
+    color: #9d755c;
+    font-weight: 700;
+}
+
+.mainAuth__login--input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #B1917D;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.mainAuth__login--input:focus {
+    border-color: #4F3B2E;
+    outline: none;
+}
+
+.mainAuth__login--button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #9d755c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*-----MOBILE-----*/
+@media screen and (max-width: 768px) { 
+
+.mainAuth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+/*styles for main register*/
+
+.mainAuth__register {
+    max-width: 100%;
+    min-width: 90%;
+}
+
+.mainAuth__login {
+    max-width: 100%;
+    min-width: 90%;
+}
+
+}
