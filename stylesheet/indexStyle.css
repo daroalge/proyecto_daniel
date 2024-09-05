@@ -194,14 +194,16 @@ box-shadow: 10px 10px 15px #1F1712;
 
 /*-----styles for main ingredients-----*/
 .main__ingredients {
-    display: block;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 .main__ingredients--top {
-    display: block;
-    justify-content: flex-end;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .main__ingredients--title {
@@ -216,10 +218,8 @@ box-shadow: 10px 10px 15px #1F1712;
 }
 
 .main__ingredients--header {
-    width: 50vw;
-    display: flex;
-    justify-content: center;
     background-color: aqua;
+    width: 200px;
 }
 
 .main__ingredients--item {
