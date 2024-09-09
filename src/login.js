@@ -1,6 +1,6 @@
-//LOGIN
 window.onload = (event) => {
-    console.log('hola estoy aca')
+
+//LOGIN
     const mainAuth__login = document.getElementById('mainAuth__login');
     const loginMessage = document.getElementById('loginMessage');
 
@@ -37,13 +37,9 @@ window.onload = (event) => {
         }
 
     });
-}
-
-
 
 // REGISTER
-window.onload  = (_event) => {
-const mainAuth__register=document.getElementById('mainAuth__register');
+    const mainAuth__register=document.getElementById('mainAuth__register');
 const registerMessage=document.getElementById('registerMessage');
 
 mainAuth__register.addEventListener('submit', async function(event){
@@ -72,12 +68,12 @@ mainAuth__register.addEventListener('submit', async function(event){
             registerMessage.textContent = 'Registro Exitoso';
             registerMessage.style.color = 'green'
         } else {
-            registerMessage.textContent = 'Error en regristro';
+            registerMessage.textContent = 'Error en Regristro';
             registerMessage.style.color = 'red'
         }
     } catch (error) {
         console.log (error)
-        registerMessage.textContent = 'hubo un error en el registro';
+        registerMessage.textContent = 'Hubo un Error en el Registro';
             registerMessage.style.color = 'red'
     }
 

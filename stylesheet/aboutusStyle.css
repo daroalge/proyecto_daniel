@@ -10,7 +10,6 @@ main {
 .main__history {
     display: flex;
     flex-direction: row;
-    width: 100vw;
     justify-content: space-around;
     padding: 20px 0px;
 }
@@ -37,6 +36,7 @@ main {
 .main__history--image {
     width: 40vw;
     border-radius: 15px;
+    padding-right: 25px;
 }
 
 /*-----styles for main innovation-----*/
@@ -44,7 +44,6 @@ main {
 .main__innovation {
     display: flex;
     flex-direction: row;
-    width: 100vw;
     justify-content: space-around;
     padding: 20px 0px;
 }
@@ -71,6 +70,7 @@ main {
 .main__innovation--image {
     width: 40vw;
     border-radius: 15px;
+    padding-left: 25px;
 }
 
 /*-----styles for main values-----*/
@@ -80,6 +80,9 @@ main {
     padding-top: 25px;
     background-color: #f5efdc;
     justify-content: space-evenly;
+    padding-bottom: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+
 }
 
 .main__values--mission {
