@@ -6,12 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const users_routes_1 = require("./routes/users_routes");
 const cors_1 = __importDefault(require("cors"));
+const product_routes_1 = require("./routes/product_routes");
 require('dotenv').config();
 const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(users_routes_1.userRoutes);
+app.use(product_routes_1.productRoutes);
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
