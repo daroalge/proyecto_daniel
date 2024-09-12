@@ -56,16 +56,16 @@ exports.getProductsById = getProductsById;
  * @returns
  */
 const createProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { productId, nombreHelado, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct } = req.body;
-    console.log(productId, nombreHelado, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct);
-    if (productId !== null && nombreHelado !== null && productDescription !== null && priceProduct !== null && sizeProduct !== null && availabilityProduct !== null && imageProduct !== null) {
+    const { productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct } = req.body;
+    console.log(productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct);
+    if (productId !== null && nombreHeladoProduct !== null && productDescription !== null && priceProduct !== null && sizeProduct !== null && availabilityProduct !== null && imageProduct !== null) {
         try {
-            yield db_connect_1.default.query('INSERT INTO products (product_id, nombre_helado, descripcion, precio, tamaño, disponibilidad, imagen) values ($1, $2, $3, $4, $5, $6, $7)', [productId, nombreHelado, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct]);
+            yield db_connect_1.default.query('INSERT INTO products (product_id, nombre_helado, descripcion, precio, tamaño, disponibilidad, imagen) values ($1, $2, $3, $4, $5, $6, $7)', [productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct]);
             return res.status(201).json({
                 message: 'Products created successfully',
                 category: {
                     productId,
-                    nombreHelado,
+                    nombreHeladoProduct,
                     productDescription,
                     priceProduct,
                     sizeProduct,
