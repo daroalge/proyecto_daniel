@@ -42,19 +42,18 @@ export const getProductsById = async (req: Request, res: Response): Promise<Resp
  * @returns 
  */
 export const createProducts = async (req: Request, res: Response): Promise<Response> => {
-    const {productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct} = req.body;
+    const {nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct} = req.body;
 
-    console.log(productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct);
+    console.log( nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct);
 
-    if (productId !== null && nombreHeladoProduct !== null && productDescription !== null && priceProduct !== null && sizeProduct !== null && availabilityProduct !== null && imageProduct !== null){
+    if ( nombreHeladoProduct !== null && productDescription !== null && priceProduct !== null && sizeProduct !== null && availabilityProduct !== null && imageProduct !== null){
         try {
-            await pool.query('INSERT INTO products (product_id, nombre_helado, descripcion, precio, tamaño, disponibilidad, imagen) values ($1, $2, $3, $4, $5, $6, $7)',
-                [productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct]
+            await pool.query('INSERT INTO products (nombre_helado, descripcion, precio, tamaño, disponibilidad, imagen) values ($1, $2, $3, $4, $5, $6)',
+                [ nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct]
             );
             return res.status(201).json({
                 message: 'Products created successfully',
                 category: {
-                    productId,
                     nombreHeladoProduct, 
                     productDescription, 
                     priceProduct, 
@@ -65,7 +64,7 @@ export const createProducts = async (req: Request, res: Response): Promise<Respo
             });
         } catch (error) {
             console.error(error);
-            return res.status(500).json('Internal Server Error');
+            return res.status(500).json('Internal Server Error' + error);
         }
     } else {
         return res.status(500).json('Internal Server Error');

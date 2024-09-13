@@ -56,15 +56,14 @@ exports.getProductsById = getProductsById;
  * @returns
  */
 const createProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct } = req.body;
-    console.log(productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct);
-    if (productId !== null && nombreHeladoProduct !== null && productDescription !== null && priceProduct !== null && sizeProduct !== null && availabilityProduct !== null && imageProduct !== null) {
+    const { nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct } = req.body;
+    console.log(nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct);
+    if (nombreHeladoProduct !== null && productDescription !== null && priceProduct !== null && sizeProduct !== null && availabilityProduct !== null && imageProduct !== null) {
         try {
-            yield db_connect_1.default.query('INSERT INTO products (product_id, nombre_helado, descripcion, precio, tamaño, disponibilidad, imagen) values ($1, $2, $3, $4, $5, $6, $7)', [productId, nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct]);
+            yield db_connect_1.default.query('INSERT INTO products (nombre_helado, descripcion, precio, tamaño, disponibilidad, imagen) values ($1, $2, $3, $4, $5, $6)', [nombreHeladoProduct, productDescription, priceProduct, sizeProduct, availabilityProduct, imageProduct]);
             return res.status(201).json({
                 message: 'Products created successfully',
                 category: {
-                    productId,
                     nombreHeladoProduct,
                     productDescription,
                     priceProduct,
@@ -76,7 +75,7 @@ const createProducts = (req, res) => __awaiter(void 0, void 0, void 0, function*
         }
         catch (error) {
             console.error(error);
-            return res.status(500).json('Internal Server Error');
+            return res.status(500).json('Internal Server Error' + error);
         }
     }
     else {
