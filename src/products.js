@@ -6,10 +6,20 @@ window.onload = (event) => {
     loadProducts();
 
     const createProducts = document.getElementById('createProducts');
+    const updateProducts = document.getElementById('updateProducts');
+    const deleteProducts = document.getElementById('deleteProducts');
+
 
     createProducts.addEventListener('click', function(event){
         window.location.href = './createProduct.html';
-        
+    });
+
+    updateProducts.addEventListener('click', function(event) {
+        window.location.href = './updateProduct.html';
+    });
+
+    deleteProducts.addEventListener('click', function(event) {
+        window.location.href = './deleteProduct.html';
     });
 };
 
