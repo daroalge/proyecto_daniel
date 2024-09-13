@@ -1,3 +1,4 @@
+/*-----styles for main Created Products-----*/
 .createProducts {
     padding: 3% 0;
     display: flex;
@@ -75,4 +76,9 @@
 .createProducts--button:hover {
     background-color: #4D392D;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*-----MOBILE-----*/
+@media screen and (max-width: 768px) {
+    
 }

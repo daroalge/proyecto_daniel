@@ -89,3 +89,8 @@ th:nth-child(7) {
     background-color: #4D392D;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
+
+/*-----MOBILE-----*/
+@media screen and (max-width: 768px) {
+    
+}

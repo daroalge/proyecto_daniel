@@ -21,21 +21,39 @@ window.onload = (event) => {
             });
 
             const data = await response.json();
-            console.log(data);
+            const rol = data.role;
+            localStorage.setItem("role", rol);
             const encodeData = btoa(JSON.stringify(data));
 
             if (response.ok) {
-                loginMessage.textContent = 'login Exitoso';
-                loginMessage.style.color = 'green'
-                window.location.href = `../html/shop.html#${encodeData}`;
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Inicio de Sesión Exitoso",
+                    text: "Bienvenido, has iniciado sesión correctamente.",
+                    timer: 5000
+                  });
+                if(rol=="usuario")window.location.href = `../html/shop.html#${encodeData}`;
+                if(rol=="administrador")window.location.href = `../html/dashboard.html#${encodeData}`;
+                if(rol=="trabajador")window.location.href = `../html/dashboard.html#${encodeData}`;
+
             } else {
-                loginMessage.textContent = 'Error en login';
-                loginMessage.style.color = 'red'
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: "Error de Inicio de Sesión",
+                    text: "Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.",
+                    timer: 5000
+                  });
             }
         } catch (error) {
-            console.log (error)
-            loginMessage.textContent = 'hubo un error en el login';
-            loginMessage.style.color = 'red'
+            Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "Error Interno",
+                text: "Ocurrió un problema inesperado. Por favor, inténtalo más tarde.",
+                timer: 5000
+              });
         }
 
     });
@@ -67,17 +85,31 @@ mainAuth__register.addEventListener('submit', async function(event){
         console.log(data);
 
         if (response.ok) {
-            registerMessage.textContent = 'Registro Exitoso';
-            registerMessage.style.color = 'green'
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Registro Exitoso",
+                text: "Tu cuenta ha sido creada correctamente.",
+                timer: 5000
+              });
+            
         } else {
-            registerMessage.textContent = 'Error en Regristro';
-            registerMessage.style.color = 'red'
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Error en el Registro",
+                text: "No pudimos completar tu registro. Por favor, revisa los datos e inténtalo nuevamente.",
+              });
+            
         }
     } catch (error) {
-        console.log (error)
-        registerMessage.textContent = 'Hubo un Error en el Registro';
-            registerMessage.style.color = 'red'
+        Swal.fire({
+            position: "center",
+            icon: "warning",
+            title: "Error Interno",
+            text: "Ocurrió un problema inesperado. Por favor, inténtalo más tarde.",
+            timer: 5000
+          });
     }
-
 });
 }
