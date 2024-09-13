@@ -34,8 +34,7 @@ window.onload = (event) => {
                     timer: 5000
                   });
                 if(rol=="usuario")window.location.href = `../html/shop.html#${encodeData}`;
-                if(rol=="administrador")window.location.href = `../html/dashboard.html#${encodeData}`;
-                if(rol=="trabajador")window.location.href = `../html/dashboard.html#${encodeData}`;
+                if(rol=="administrador" , "trabajador")window.location.href = `../html/dashboard.html#${encodeData}`;
 
             } else {
                 Swal.fire({

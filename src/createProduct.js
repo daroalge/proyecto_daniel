@@ -21,13 +21,30 @@ window.onload = (event) => {
             });
             const data = await response.json();
             if (response.ok) {
-                window.alert('Producto Creado Exitosamente.'); 
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: '¡Producto Creado!',
+                    text: 'El producto ha sido creado exitosamente.',
+                    timer: 5000
+                  });
             } else {
-                window.alert('Producto No Fue Creada.');
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: 'Error al Crear Producto',
+                    text: 'No se pudo crear el producto. Por favor, intenta nuevamente más tarde.',
+                    timer: 5000
+                  });
             }
         } catch (error) {
-            console.error(error);
-            window.alert('Tenemos problemas técnicos.');
-        }
+            Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "Error Interno",
+                text: "Ocurrió un problema inesperado. Por favor, inténtalo más tarde.",
+                timer: 5000
+              });
+        }cd..
     });
 };
