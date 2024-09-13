@@ -23,7 +23,7 @@ const generateToken = (req, response) => __awaiter(void 0, void 0, void 0, funct
     const user = query.rows[0];
     if (query.rowCount !== null && query.rowCount > 0) {
         const accessToken = jsonwebtoken_1.default.sign(user, `${process.env.CLAVE_JWT}`, { expiresIn: '1h' });
-        return response.status(200).json({ accessToken });
+        return response.status(200).json({ accessToken, role: user.rol });
     }
     else {
         return response.status(400).json('User Not found');

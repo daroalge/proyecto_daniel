@@ -11,7 +11,7 @@ export const generateToken = async (req: Request, response:Response): Promise<Re
     const user = query.rows[0];
     if (query.rowCount !== null  && query.rowCount > 0){
         const accessToken = jwt.sign(user, `${process.env.CLAVE_JWT}`, {expiresIn: '1h'});
-        return response.status(200).json({accessToken});
+        return response.status(200).json({accessToken, role:user.rol});
     } else {
         return response.status(400).json('User Not found');
     }
@@ -38,8 +38,7 @@ export const createUser = async (req: Request, res: Response): Promise<Response>
             console.error(error);
             return res.status(500).json('Internal Server Error');
         }
-    } else {
+    } else  {
         return res.status(500).json('Internal Server Error');
     }
 };
-
