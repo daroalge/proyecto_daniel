@@ -151,7 +151,11 @@
             mainShopItemStartDiv.appendChild(star);
           }
           const h4 = document.createElement("h4");
-          h4.textContent = product.precio;
+          h4.textContent = new Intl.NumberFormat('es-CO',{
+                style:'currency',
+                currency:'COP',
+                minimumFractionDigits:2
+            }).format(product.precio);
 
           const iconoCart = document.createElement("i");
           iconoCart.className = "bi bi-cart-fill cart";
