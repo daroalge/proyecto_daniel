@@ -45,6 +45,6 @@ window.onload = (event) => {
                 text: "Ocurrió un problema inesperado. Por favor, inténtalo más tarde.",
                 timer: 5000
               });
-        }cd..
+        }
     });
 };
