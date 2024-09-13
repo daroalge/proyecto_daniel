@@ -44,44 +44,45 @@
     <!--MAIN-->
     <main class="createProducts">
         <div class="createProducts">
-            <h2>Crear Productos</h2>
             <form class="createProductsForm" id="createProductsForm">
                 <fieldset class="createProducts--fieldset">
+                    <h2>Crear Productos</h2>
     
                     <div class="createProducts--field">
                         <label class="createProducts--label" for="nombreHelado">Nombre del Helado *</label>
                         <input class="createProducts--input" type="text" name="nombreHeladoInput" id="nombreHelado" minlength="2" maxlength="50" required>
                     </div>
     
-                    <div class="createProducts">
+                    <div class="createProducts--field">
                         <label class="createProducts--label" for="description">Descripción *</label>
-                        <input class="createProducts--input" type="text" name="descriptionInput" id="description" minlength="2" maxlength="50" required>
+                        <input class="createProducts--input" type="text" name="descriptionInput" id="description" minlength="2" maxlength="120" required>
                     </div>
 
-                    <div class="createProducts">
+                    <div class="createProducts--field">
                         <label class="createProducts--label" for="price">Precio *</label>
                         <input class="createProducts--input" type="number" name="priceInput" id="price" minlength="4" maxlength="8" required>
                     </div>
 
-                    <div class="createProducts">
+                    <div class="createProducts--field">
                         <label class="createProducts--label" for="size">Tamaño *</label>
                         <input class="createProducts--input" type="text" name="sizeInput" id="size" minlength="4" maxlength="15" required placeholder="Pequeño, Mediano, Grande">
                     </div>
 
-                    <div class="createProducts">
+                    <div class="createProducts--field">
                         <label class="createProducts--label" for="availability">Disponibilidad *</label>
                         <input class="createProducts--input" type="checkbox" name="availabilityInput" id="availability"required>
                     </div>
 
-                    <div class="createProducts"></div>
+                    <div class="createProducts--field">
                         <label class="createProducts--label" for="image">Url de la imagen *</label>
-                        <input class="createProducts--input" type="url" name="imageInput" id="image" minlength="4" maxlength="50" placeholder="https://example.com" required>
+                        <input class="createProducts--input" type="url" name="imageInput" id="image" minlength="4" maxlength="100" placeholder="https://example.com" required>
                     </div>
     
-                    <input type="submit" class="--button" value="Crear Producto">
+                    <input type="submit" class="createProducts--button" value="Crear Producto">
     
                 </fieldset>
             </form>
+        </div>
     </main>
 
     <!--FOOTER-->
