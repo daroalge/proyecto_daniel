@@ -35,7 +35,6 @@
                 <ul class="menu__list nav__list">
                     <li class="menu__list--item"><a class="menu__list--link" href="./index.html">INICIO</a></li>
                     <li class="menu__list--item"><a class="menu__list--link" href="./aboutus.html">SOBRE NOSOTROS</a></li>
-                    <li class="menu__list--item"><a class="menu__list--link" href="./shop.html">TIENDA</a></li>
                     <li class="menu__list--item"><a class="menu__list--link" href="./login.html">LOGIN</a></li>
                 </ul>
             </nav>
@@ -46,6 +45,10 @@
     <main class="mainAuth">
         <form class="mainAuth__register" id="mainAuth__register">
             <fieldset class="mainAuth__register--fieldset">
+
+                <div class="mainAuth__register--title">
+                    <h2>Registro</h2>
+                </div>
 
                 <div class="mainAuth__register--field">
                     <label class="mainAuth__register--label" for="firstName">Nombre *</label>
@@ -69,7 +72,7 @@
 
                 <div class="mainAuth__register--field">
                     <label class="mainAuth__register--label" for="phone">Teléfono</label>
-                    <input class="mainAuth__register--input" type="number" name="phoneInput" id="phone" min="8" max="10" placeholder="(+IndicadorPais) Telefono">
+                    <input class="mainAuth__register--input" type="number" name="phoneInput" id="phone" minlength="8" maxlength="10" placeholder="(+IndicadorPais) Telefono">
                 </div>
 
                 <div class="mainAuth__register--field">
@@ -81,11 +84,14 @@
 
             </fieldset>
         </form>
-        <p id="registerMessage"></p>
 
 
         <form class="mainAuth__login" id="mainAuth__login">
             <fieldset class="mainAuth__login--fieldset">
+
+                <div class="mainAuth__login--title">
+                    <h2>Inicia Sesión</h2>
+                </div>
 
                 <div class="mainAuth__login--field">
                     <label class="mainAuth__login--label" for="userName">Nombre de usuario *</label>
@@ -101,7 +107,7 @@
 
             </fieldset>
         </form>
-        <p id="loginMessage"></p>
+        </div>
     </main>
 
     <!--FOOTER-->
@@ -116,7 +122,7 @@
         </div>
 
         <div class="footer__info">
-            <p>&copy; 2024 Daniel Alfonso. Todos los derechos reservados.</p>
+            <p><a href="https://github.com/daroalge" target="_blank">2024 Daniel Alfonso. Todos los derechos reservados.</a></p>
             <p><a href="#">Politica de Privacidad</a></p>
             <p><a href="#">Términos de Uso</a></p>
         </div>
