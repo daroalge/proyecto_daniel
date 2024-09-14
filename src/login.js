@@ -33,8 +33,8 @@ window.onload = (event) => {
                     text: "Bienvenido, has iniciado sesión correctamente.",
                     timer: 5000
                   });
-                if(rol=="usuario")window.location.href = `../html/shop.html#${encodeData}`;
-                if(rol=="administrador" , "trabajador")window.location.href = `../html/dashboard.html#${encodeData}`;
+                if(rol==="usuario")window.location.href = `../html/shop.html#${encodeData}`;
+                if(rol === "administrador" || rol === "trabajador")window.location.href = `../html/dashboard.html#${encodeData}`;
 
             } else {
                 Swal.fire({
