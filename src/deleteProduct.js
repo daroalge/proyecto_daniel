@@ -1,8 +1,4 @@
 window.onload = (event) => {
-    //const encodeData = window.location.hash.substring(1);
-    //const data = JSON.parse(atob(encodeData));
-    //console.log(data);
-
     loadProducts();
 
     const createProducts = document.getElementById('createProducts');
@@ -104,6 +100,9 @@ async function deleteCategory(id) {
                 text: 'El producto ha sido eliminado correctamente.',
                 timer: 5000
             });
+            then(() => {
+                location.reload(); 
+            });
         } else {
             Swal.fire({
                 position: "center",
@@ -123,4 +122,3 @@ async function deleteCategory(id) {
         });
     }
 }
-
