@@ -58,14 +58,29 @@ async function actulizarProductos(id, nameHelado, descripcionHelado, precioHelad
         });
         const data = await response.json();
         if (response.ok) {
-            window.alert('Categoría Actualizada Exitosamente.'); 
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: '¡Producto Actualizado!',
+                text: 'El producto ha sido actualizado correctamente.',
+                timer: 5000
+              });
         } else {
-            window.alert('Categoría No Fue Actualizada.');
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: 'Error al Actualizar Producto',
+                text: 'No se pudo actualizar el producto. Por favor, intenta nuevamente más tarde.',,
+                timer: 5000
+              });
         }
 } catch (error) {
-    console.error(error);
-    window.alert('Tenemos problemas técnicos.');
+    Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "Error Interno",
+        text: "Ocurrió un problema inesperado. Por favor, inténtalo más tarde.",
+        timer: 5000
+      });
 }
 };
-    
-

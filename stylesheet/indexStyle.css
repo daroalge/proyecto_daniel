@@ -116,7 +116,7 @@ a:link, a:visited, a:active {
 }
 
 .section__banner--iceCreamPhoto{
-    width: 70vw;
+    width: 50vw;
     border-radius: 5px;
     object-fit: cover;
 }
@@ -131,6 +131,10 @@ a:link, a:visited, a:active {
     background-color:#4ca6de;
     border-radius: 5px;
     cursor: default;
+}
+
+#back, #forward {
+    color: #4ca6de;
 }
 
 /*-----styles for main products-----*/
@@ -208,6 +212,7 @@ box-shadow: 10px 10px 15px #1F1712;
 .main__ingredients--top {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -223,12 +228,10 @@ box-shadow: 10px 10px 15px #1F1712;
 }
 
 .main__ingredients--header {
-    background-color: aqua;
-    width: 200px;
+    width: 60vw;
 }
 
 .main__ingredients--item {
-    background-color: #1F1712;
     padding: 50px 0px;
     display: flex;
     flex-direction: row;
