@@ -109,15 +109,19 @@ exports.deleteProducts = deleteProducts;
  */
 const updateProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = parseInt(req.params.id);
-    const { categoryName, categoryDescription } = req.body;
+    const { nameHelado, descripcionHelado, precioHelado, tamañoHelado, disponibilidadHelado, imagenHelado } = req.body;
     try {
-        yield db_connect_1.default.query('UPDATE Products SET category_name = $1, description = $2 WHERE category_id = $3', [categoryName, categoryDescription, id]);
+        yield db_connect_1.default.query('UPDATE products SET nombre_helado = $1, descripcion = $2, precio = $3, tamaño = $4, disponibilidad = $5, imagen = $6 WHERE product_id = $7', [nameHelado, descripcionHelado, precioHelado, tamañoHelado, disponibilidadHelado, imagenHelado, id]);
         return res.json({
             message: 'Category Successfully Updated.',
-            category: {
+            product: {
                 id,
-                categoryName,
-                categoryDescription,
+                nameHelado,
+                descripcionHelado,
+                precioHelado,
+                tamañoHelado,
+                disponibilidadHelado,
+                imagenHelado,
             },
         });
     }

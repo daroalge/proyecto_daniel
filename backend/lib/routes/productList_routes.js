@@ -5,7 +5,7 @@ const express_1 = require("express");
 const productList_controller_1 = require("../controllers/productList_controller");
 exports.productListRoutes = (0, express_1.Router)();
 exports.productListRoutes.get('/product/list', productList_controller_1.getProducts);
-exports.productListRoutes.get('/products/list/ :id', productList_controller_1.getProductsById);
+exports.productListRoutes.get('/products/list/:id', productList_controller_1.getProductsById);
 exports.productListRoutes.post('/products/list/createProducts', productList_controller_1.createProducts);
 exports.productListRoutes.delete('/products/list/deleteProducts/:id', productList_controller_1.deleteProducts);
 exports.productListRoutes.put('/products/list/updateProducts/:id', productList_controller_1.updateProducts);
