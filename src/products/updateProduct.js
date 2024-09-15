@@ -59,7 +59,6 @@ async function loadProducts() {
             tamañoCell.textContent = product.tamaño;
             tamañoCell.className = 'product-size';
 
-
             const disponibilidadCell = document.createElement('td');
             disponibilidadCell.textContent = product.disponibilidad;
             disponibilidadCell.classList.add('product-avalivity'); 
