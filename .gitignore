@@ -1,5 +1,5 @@
 z_ignore/
 *-lock.json
-/lib
+
 backend/node_modules
 .env

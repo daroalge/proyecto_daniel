@@ -4,7 +4,8 @@
   "description": "this is the final project for talento tech",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && nodemon lib/app.js",
+    "build": "tsc",
+    "start": "nodemon lib/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
