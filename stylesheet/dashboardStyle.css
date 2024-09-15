@@ -12,6 +12,7 @@
 }
 
 .dashboard__main h2 {
+    padding: 20px 0;
     text-align: center;
     font-size: 2rem;
     color: #6E5240;
@@ -85,12 +86,112 @@ th:nth-child(7) {
     transition: 0.5s, box-shadow 0.3s ease;
 }
 
-.dashboard__main button:hover {
-    background-color: #4D392D;
+#createProducts:hover {
+    background-color: #6ADD0D;
+    color: black;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+#updateProducts:hover {
+    background-color: #FFEE00;
+    color: black;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+#deleteProducts:hover {
+    background-color: #FF0801;
+    color: black;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 /*-----MOBILE-----*/
 @media screen and (max-width: 768px) {
     
+    .dashboard {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dashboard__main {
+        align-items: center;
+        margin-left: none;
+        min-width: 95vw;
+        margin-left: 0px;
+        padding: 5px;
+        border-style: solid;
+        margin: 0px;
+    }
+
+    .dashboard__main--buttons {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard__main button {
+        font-size: 1.2rem;
+        font-weight: 700;
+        border-radius: 5px;
+        width: 70%;
+        height: 70px;
+        padding: 10px 17px;
+        margin: 20px 0;
+    }
+
+    #createProducts:hover {
+        background-color: #6E5240;
+        color: none;
+        box-shadow: none;
+    }
+
+    #updateProducts:hover {
+        background-color: #6E5240;
+        color: none;
+        box-shadow: none;
+    }
+
+    #deleteProducts:hover {
+        background-color: #6E5240;
+        color: none;
+        box-shadow: none;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    th {
+        height: 50px;
+    }
+
+    th:nth-child(1) {
+        width: 7%;
+    }
+    
+    th:nth-child(2) {
+        width: 15%;
+    }
+    
+    th:nth-child(3) {
+        width: 30%;
+    }
+    
+    th:nth-child(4) {
+        width: 8%;
+    }
+
+    .product-image {
+        display: none;
+    }
+
+    .product-avalivity {
+        display: none;
+    }
+
+    .product-size {
+        display: none;
+    }
 }

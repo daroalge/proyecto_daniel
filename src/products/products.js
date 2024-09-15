@@ -35,6 +35,8 @@ async function loadProducts() {
         const products = await response.json();
         console.log(products)
 
+        products.sort((a, b) => a.product_id - b.product_id);
+
         const tableBody = document.getElementById('productsTbody');
         tableBody.innerHTML = '';
 
@@ -55,12 +57,15 @@ async function loadProducts() {
 
             const tamañoCell = document.createElement('td');
             tamañoCell.textContent = product.tamaño;
+            tamañoCell.classList.add('product-size'); 
 
             const disponibilidadCell = document.createElement('td');
             disponibilidadCell.textContent = product.disponibilidad;
+            disponibilidadCell.classList.add('product-avalivity'); 
 
             const imagenCell = document.createElement('td');
             imagenCell.textContent = product.imagen;
+            imagenCell.classList.add('product-image'); 
 
             row.appendChild(idCell);
             row.appendChild(nombreHeladoCell);
