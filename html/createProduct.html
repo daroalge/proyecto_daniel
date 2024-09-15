@@ -36,14 +36,14 @@
                     <li class="menu__list--item"><a class="menu__list--link" href="./index.html">INICIO</a></li>
                     <li class="menu__list--item"><a class="menu__list--link" href="./aboutus.html">SOBRE NOSOTROS</a></li>
                     <li class="menu__list--item"><a class="menu__list--link" href="./shop.html">TIENDA</a></li>
-                    <li class="menu__list--item"><a class="menu__list--link" href="./login.html">LOGIN</a></li>
+                    <li class="menu__list--item"><a class="menu__list--link" href="./login.html">CERRAR SESIÓN</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!--MAIN-->
-    <main class="createProducts">
+    <main class="createProduct">
         <div class="createProducts">
             <form class="createProductsForm" id="createProductsForm">
                 <fieldset class="createProducts--fieldset">
@@ -63,11 +63,6 @@
                         <label class="createProducts--label" for="price">Precio *</label>
                         <input class="createProducts--input" type="number" name="priceInput" id="price" minlength="4" maxlength="8" required>
                     </div>
-
-                    <!--<div class="createProducts--field">
-                        <label class="createProducts--label" for="size">Tamaño *</label>
-                        <input class="createProducts--input" type="text" name="sizeInput" id="size" minlength="4" maxlength="15" required placeholder="Pequeño, Mediano, Grande">
-                    </div>-->
 
                     <div class="createProducts--field">
                         <label class="createProducts--label" for="size">Tamaño *</label>
@@ -95,6 +90,7 @@
                 </fieldset>
             </form>
         </div>
+        <button type="submit" id="createProducts--buttonBack" onclick="window.location.href='dashboard.html'"><i class="bi bi-arrow-left-circle-fill"></i>Regresa</button>
     </main>
 
     <!--FOOTER-->
@@ -109,7 +105,7 @@
         </div>
 
         <div class="footer__info">
-            <p>&copy; 2024 Daniel Alfonso. Todos los derechos reservados.</p>
+            <p><a href="https://github.com/daroalge" target="_blank">2024 Daniel Alfonso. Todos los derechos reservados.</a></p>
             <p><a href="#">Politica de Privacidad</a></p>
             <p><a href="#">Términos de Uso</a></p>
         </div>
