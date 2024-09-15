@@ -39,6 +39,7 @@ async function loadProducts() {
 
             const idCell = document.createElement('td');
             idCell.textContent = product.product_id;
+            idCell.className = 'idproduct';
 
             const nombreHeladoCell = document.createElement('td');
             nombreHeladoCell.textContent = product.nombre_helado;
@@ -51,17 +52,20 @@ async function loadProducts() {
 
             const tamañoCell = document.createElement('td');
             tamañoCell.textContent = product.tamaño;
+            tamañoCell.className = 'product-size';
 
             const disponibilidadCell = document.createElement('td');
             disponibilidadCell.textContent = product.disponibilidad;
+            disponibilidadCell.classList.add('product-avalivity'); 
 
             const imagenCell = document.createElement('td');
             imagenCell.textContent = product.imagen;
+            imagenCell.classList.add('product-image'); 
 
             
             
             const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Eliminar';
+            deleteButton.textContent = 'eliminar';
             deleteButton.className = 'delete_button';
             deleteButton.onclick = () => deleteCategory(product.product_id);
             
