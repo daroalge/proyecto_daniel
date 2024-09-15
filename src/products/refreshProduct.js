@@ -70,7 +70,7 @@ async function actulizarProductos(id, nameHelado, descripcionHelado, precioHelad
                 position: "center",
                 icon: "error",
                 title: 'Error al Actualizar Producto',
-                text: 'No se pudo actualizar el producto. Por favor, intenta nuevamente más tarde.',,
+                text: 'No se pudo actualizar el producto. Por favor, intenta nuevamente más tarde.',
                 timer: 5000
               });
         }

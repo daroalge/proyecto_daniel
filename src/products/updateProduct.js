@@ -43,6 +43,8 @@ async function loadProducts() {
 
             const idCell = document.createElement('td');
             idCell.textContent = product.product_id;
+            idCell.className = 'idproduct';
+
 
             const nombreHeladoCell = document.createElement('td');
             nombreHeladoCell.textContent = product.nombre_helado;
@@ -55,20 +57,21 @@ async function loadProducts() {
 
             const tamañoCell = document.createElement('td');
             tamañoCell.textContent = product.tamaño;
+            tamañoCell.className = 'product-size';
+
 
             const disponibilidadCell = document.createElement('td');
             disponibilidadCell.textContent = product.disponibilidad;
+            disponibilidadCell.classList.add('product-avalivity'); 
 
             const imagenCell = document.createElement('td');
             imagenCell.textContent = product.imagen;
+            imagenCell.classList.add('product-image'); 
 
-            
-            
             const updateButton = document.createElement('button');
-            updateButton.textContent = 'Actulizar';
+            updateButton.textContent = 'Actualizar';
             updateButton.className = 'update_button';
             updateButton.onclick = () => updateProduct(product.product_id);
-            
 
             row.appendChild(idCell);
             row.appendChild(nombreHeladoCell);
@@ -87,5 +90,5 @@ async function loadProducts() {
     }
 };
 function updateProduct (id) {
-    window.location.href = `./z.html?id=${id}`;
+    window.location.href = `./refreshProduct.html?id=${id}`;
 }
