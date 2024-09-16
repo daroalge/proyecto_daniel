@@ -2,12 +2,12 @@ import {Pool} from "pg";
 require('dotenv').config();
 
 let pool: Pool;
-console.log(process.env.DB_DEV_PASSWORD)
-/*if (process.env.PRODUCTION) {
+console.log(process.env.PRODUCTION)
+if (process.env.PRODUCTION) {
     pool = new Pool({
         connectionString: process.env.POSTGRES_URL,
     });
-} else {*/
+} else {
     pool = new Pool({
         host: process.env.DB_DEV_HOST,
         user: process.env.DB_DEV_USER,
@@ -16,6 +16,6 @@ console.log(process.env.DB_DEV_PASSWORD)
         port: parseInt(`${process.env.DB_DEV_PORT}`),
         idleTimeoutMillis: 3000,
     });
-//}
+}
 
 export default pool;
