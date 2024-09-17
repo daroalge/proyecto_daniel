@@ -1,15 +1,13 @@
-# proyecto
+# proyecto_daniel_backend
 proyecto final para el curso de desarrollador web full stack de TalentoTech
 
 # Tecnologías
-
 - Node.js
 - Express
 - PostgresSQL
 - Vercel (para despliegue, si aplica)
 
 ## Instalación
-
 1. Clona este repositorio:
 
     git clone https://github.com/daroalge/proyecto_daniel_backend.git
@@ -42,7 +40,6 @@ PRODUCTION=..
     npm start
 
 # Uso
-
 Para utilizar este backend, debes enviar peticiones a los siguientes endpoints:
 
 - `POST /api/login`: Inicia sesión de un usuario.
